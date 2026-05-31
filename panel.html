@@ -14,7 +14,20 @@
     <div class="extension-container">
       <a href="https://7tv.app" target="_blank" class="header">
         <img src="img/logo.svg" class="header-logo" />
+        <span class="emote-count"></span>
       </a>
+      <div class="controls-bar">
+        <input type="text" class="search-input" placeholder="Search emotes..." />
+        <div class="controls-row">
+          <select class="sort-select">
+            <option value="default">Order added</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+            <option value="newest">Newest first</option>
+          </select>
+          <button class="anim-toggle" data-active="false">GIF only</button>
+        </div>
+      </div>
       <div class="emotes"></div>
     </div>
   </body>
