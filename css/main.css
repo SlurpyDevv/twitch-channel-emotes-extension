@@ -30,7 +30,7 @@ body {
 .extension-container {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow: hidden;
   background: var(--bg);
   height: 100%;
 }
@@ -42,14 +42,12 @@ body {
   padding: 12px 16px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  text-decoration: none;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  flex-shrink: 0;
 }
 
 .header-logo {
-  height: 26px;
+  height: 20px;
+  width: auto;
 }
 
 .emote-count {
@@ -66,6 +64,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 7px;
+  overflow-y: auto;
+  flex: 1;
+  align-content: start;
 }
 
 .emote {
@@ -153,6 +154,13 @@ body {
   flex-shrink: 0;
 }
 
+.emote-badge.tier1 { color: #808080; background: rgba(128,128,128,0.15); }
+.emote-badge.tier2 { color: #9147ff; background: rgba(145,71,255,0.15); }
+.emote-badge.tier3 { color: #f7b955; background: rgba(247,185,85,0.15); }
+.emote-badge.follower { color: #1db954; background: rgba(29,185,84,0.15); }
+.emote-badge.bits { color: #e91916; background: rgba(233,25,22,0.15); }
+.emote-badge.global { color: #00b5d8; background: rgba(0,181,216,0.15); }
+
 .status-message {
   color: var(--text-muted);
   text-align: center;
@@ -162,13 +170,36 @@ body {
   grid-column: 1 / -1;
 }
 
+.tabs {
+  display: flex;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 9px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .controls-bar {
   padding: 8px 10px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 51px;
-  z-index: 9;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;

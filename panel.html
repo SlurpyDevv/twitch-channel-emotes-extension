@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7TV Emotes - Panel</title>
+    <title>ChannelEmotes - Panel</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/panel.css" />
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
@@ -12,10 +12,15 @@
   </head>
   <body>
     <div class="extension-container">
-      <a href="https://7tv.app" target="_blank" class="header">
+      <div class="header">
         <img src="img/logo.svg" class="header-logo" />
         <span class="emote-count"></span>
-      </a>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="7tv">7TV</button>
+        <button class="tab" data-tab="twitch">Twitch</button>
+        <button class="tab" data-tab="global">Global</button>
+      </div>
       <div class="controls-bar">
         <input type="text" class="search-input" placeholder="Search emotes..." />
         <div class="controls-row">
