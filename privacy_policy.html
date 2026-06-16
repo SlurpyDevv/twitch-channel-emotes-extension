@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChannelEmotes – Privacy Policy</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: #0e0e10;
+        color: #efeff1;
+        line-height: 1.7;
+        padding: 2rem 1rem;
+      }
+      .container { max-width: 720px; margin: 0 auto; }
+      h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+      .subtitle { color: #adadb8; font-size: 0.9rem; margin-bottom: 2.5rem; }
+      h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: #bf94ff; }
+      p { margin-bottom: 0.75rem; }
+      ul { margin: 0.5rem 0 0.75rem 1.5rem; }
+      li { margin-bottom: 0.35rem; }
+      a { color: #bf94ff; }
+      footer { margin-top: 3rem; color: #adadb8; font-size: 0.8rem; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">ChannelEmotes Twitch Extension &nbsp;·&nbsp; Last updated: June 16, 2026</p>
+
+      <h2>Overview</h2>
+      <p>
+        ChannelEmotes is a Twitch Panel and Video Overlay Extension that displays the
+        emotes available in a broadcaster's channel, sourced from 7TV and Twitch.
+        This policy explains what information the Extension accesses, how it is used,
+        and what is <em>not</em> collected.
+      </p>
+
+      <h2>Information We Access</h2>
+      <p>The Extension accesses the following information provided by the Twitch Extension SDK:</p>
+      <ul>
+        <li>
+          <strong>Channel ID</strong> – A numeric identifier for the broadcaster's channel. This is
+          used solely to query the 7TV API (<code>7tv.io</code>) and the Twitch Helix API for
+          that channel's active emotes.
+        </li>
+        <li>
+          <strong>Extension Helix Token</strong> – A short-lived, read-only token provided by
+          Twitch to the Extension. It is used exclusively to make authorised requests to
+          Twitch's emote endpoints (<code>/helix/chat/emotes</code> and
+          <code>/helix/chat/emotes/global</code>). The token is never stored or transmitted
+          to any third-party server.
+        </li>
+      </ul>
+
+      <h2>Information We Do Not Collect</h2>
+      <ul>
+        <li>We do not collect, store, or transmit any personally identifiable information (PII).</li>
+        <li>We do not use Identity Linking (ID Share) or request viewer identity information.</li>
+        <li>We do not use cookies, local storage, or any other persistent storage mechanism.</li>
+        <li>We do not integrate any analytics, advertising, or tracking services.</li>
+        <li>We do not log IP addresses or user behaviour.</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <p>The Extension communicates with the following external services to retrieve emote data:</p>
+      <ul>
+        <li>
+          <strong>7TV API</strong> (<a href="https://7tv.io" target="_blank" rel="noopener noreferrer">7tv.io</a>) –
+          Requests are limited to fetching publicly available emote sets for the current channel.
+          Please refer to
+          <a href="https://7tv.app/privacy" target="_blank" rel="noopener noreferrer">7TV's Privacy Policy</a>
+          for information on how 7TV handles requests to its API.
+        </li>
+        <li>
+          <strong>Twitch Helix API</strong> (<a href="https://dev.twitch.tv" target="_blank" rel="noopener noreferrer">dev.twitch.tv</a>) –
+          Used to retrieve the broadcaster's Twitch emotes and global Twitch emotes.
+          Please refer to
+          <a href="https://www.twitch.tv/p/en/legal/privacy-notice/" target="_blank" rel="noopener noreferrer">Twitch's Privacy Notice</a>
+          for information on how Twitch handles API requests.
+        </li>
+      </ul>
+
+      <h2>Data Retention</h2>
+      <p>
+        The Extension does not retain any data. All emote data is fetched on demand when
+        the Extension loads and exists only in memory for the duration of the current
+        browser session. It is discarded when the page is closed or refreshed.
+      </p>
+
+      <h2>Children's Privacy</h2>
+      <p>
+        The Extension does not knowingly collect any information from users of any age,
+        including children under the age of 13.
+      </p>
+
+      <h2>Changes to This Policy</h2>
+      <p>
+        If this policy is updated, the revised version will be published at this URL
+        with an updated "Last updated" date. Continued use of the Extension after changes
+        are posted constitutes acceptance of the revised policy.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have any questions about this privacy policy, please open an issue on the
+        project's GitHub repository.
+      </p>
+
+      <footer>
+        <p>ChannelEmotes Twitch Extension – Privacy Policy</p>
+      </footer>
+    </div>
+  </body>
+</html>
